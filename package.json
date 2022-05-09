@@ -4,7 +4,9 @@
   "description": "Favs is a new company that aims to provide a better way to organize your favorite things: music, clothes, courses, etc., all in one place.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env NODE_ENV=test jest ",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "start": "cross-env NODE_ENV=production node index.js"
   },
   "author": "Francisco",
   "license": "MIT",
