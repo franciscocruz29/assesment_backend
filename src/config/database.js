@@ -16,7 +16,7 @@ async function connectDB() {
   connection = mongoose.connection;
 
   connection.once("open", () =>
-    console.log("Connection established successfully")
+    console.log("Connection established successfully with mongodb")
   );
   connection.on("disconnected", () => console.log("Successfully disconnected"));
   connection.on("error", (err) => console.log("Something went wrong!", err));
