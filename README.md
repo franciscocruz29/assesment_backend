@@ -8,6 +8,7 @@ Create a .env file with the following properties:
 MONGODB_URI=[Add DB connection here]
 MONGODB_TEST_URI=[Add DB test connection here]
 TOKEN_KEY=[Add token key]
+PORT=[Add port]
 ```
 
 Installation is done using the
