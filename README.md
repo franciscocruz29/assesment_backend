@@ -12,7 +12,7 @@ PORT=[Add port]
 ```
 
 Installation is done using the
-[`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
+[`npm install`](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) command:
 
 ```console
 $ npm install
