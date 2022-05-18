@@ -51,12 +51,14 @@ describe("User", () => {
       .get("/api/favs")
       .set("Authorization", `Bearer ${user.token}`);
     expect(res.statusCode).toBe(200);
+    expect(res.body).toBeInstanceOf(Array);
   });
   it("should get fav list by id", async () => {
     const res = await req(app)
       .get(`/api/favs/${favListId.toString()}`)
       .set("Authorization", `Bearer ${user.token}`);
     expect(res.statusCode).toBe(200);
+    expect(res.body).toBeInstanceOf(Object);
     expect(res.body).not.toBe(null);
   });
   it("should create fav list", async () => {
@@ -75,6 +77,7 @@ describe("User", () => {
       .set("Authorization", `Bearer ${user.token}`)
       .send(favList);
     expect(res.statusCode).toBe(201);
+    expect(res.body).toBeInstanceOf(Object);
     expect(res.body).not.toBe(null);
   });
   it("should delete fav list by id", async () => {
